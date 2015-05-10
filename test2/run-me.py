@@ -9,10 +9,10 @@ import  csv
 import json
 from numpy.random import random_integers
 
-model_params = permutations_runner.runWithPermutationsScript ( "permutations.py", 
-			{'maxWorkers':4, 'overwrite': True}, "reports/mjh", "." )
-model = ModelFactory.create( model_params )
-exit 0
+#model_params = permutations_runner.runWithPermutationsScript ( "permutations.py", 
+#			{'maxWorkers':4, 'overwrite': True}, ".", "." )
+#model = ModelFactory.create( model_params )
+#exit (0)
 
 shutil.copyfile("model_0/model_params.py", "model_params.py")
 
@@ -34,7 +34,7 @@ for r in range(10000):
 
 print " === CLASSIFY"
 for z in range(99):
-	ip =  random_integers( low=0, high=99 ) ;
+	ip =  37 #random_integers( low=0, high=99 ) ;
 	res=model.run( { "letter": "A", "number":  ip, "categoryx": None } )
 	print "A"+str(ip),  res.inferences["multiStepBestPredictions"][0], res.inferences 
 #  read in the real data
