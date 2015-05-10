@@ -2,7 +2,6 @@
 
 from nupic.frameworks.opf.modelfactory import ModelFactory
 from nupic.swarming import permutations_runner
-from nupic_output import NuPICFileOutput, NuPICPlotOutput
 import shutil
 import math
 import  csv
